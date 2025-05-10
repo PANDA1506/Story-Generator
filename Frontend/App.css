@@ -1,0 +1,122 @@
+/* General Body and App Container */
+.app-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background-color: #f6f1eb;
+  min-height: 100vh;
+  color: #3e2f2f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Title */
+.app-title {
+  font-size: 3em;
+  font-weight: 700;
+  color: #8d6748;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2em;
+  color: #6c5c49;
+  margin-bottom: 25px;
+}
+
+/* Input and Button Container */
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Input Field */
+.input-field {
+  padding: 12px;
+  width: 300px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #8d6748;
+  outline: none;
+}
+
+/* Button Styles */
+.generate-btn {
+  padding: 12px 20px;
+  background-color: #8d6748;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generate-btn:disabled {
+  background-color: #bba193;
+  cursor: not-allowed;
+}
+
+.generate-btn:hover:not(:disabled) {
+  background-color: #6e4c35;
+}
+
+/* Spinner in Button */
+.spinner {
+  border: 3px solid #f3f3f3; /* Light gray */
+  border-top: 3px solid #fff; /* White color for spinner */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Story Box */
+.story-box {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fffdfb;
+  border: 1px solid #e6d4c1;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Error Message */
+.error {
+  color: red;
+  margin-top: 15px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Animation for App Title */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
